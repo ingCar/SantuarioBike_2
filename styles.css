@@ -1,0 +1,235 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Encabezado y navegación */
+header {
+    background-color: #222;
+    padding: 15px 0;
+}
+
+/* Estilos generales para el menú */
+nav {
+    position: relative; /* Necesario para posicionar el menú desplegable */
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    margin: 0 15px; /* Espaciado si es necesario */
+}
+
+.menu-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: white; /* Asegúrate de que el icono sea visible */
+}
+
+/* Estilos para la lista de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Añadido para suavizar el cambio de color */
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajusta según sea necesario */
+        right: 0;
+        background: #222; /* Color de fondo para el menú desplegable */
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espaciado para elementos en el menú desplegable */
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Ajusta el tamaño del texto si es necesario */
+    }
+}
+
+.container-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.size-6 {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+/* Hero Section (Imagen principal) */
+.hero {
+    background-image: url('images/portada.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+/* Sección de Productos */
+#productos {
+    background-color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#productos h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.container-item {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-fijo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-fijo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.whatsapp-fijo:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-item {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
